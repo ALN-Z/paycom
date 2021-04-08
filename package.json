@@ -1,0 +1,30 @@
+{
+  "name": "paycom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.ts --number1 10 --number2 20 --operation add --printer json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALN-Z/paycom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALN-Z/paycom/issues"
+  },
+  "homepage": "https://github.com/ALN-Z/paycom#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/yargs": "^16.0.1",
+    "yargs": "^16.2.0"
+  }
+}

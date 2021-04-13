@@ -1,11 +1,12 @@
+import { Operation } from './../enums/Operation';
 import { IPrinter } from '../interfaces/IPrinter';
 
 export class MyMath {
     firstNumber: number;
     secondNumber: number;
-    operation: string;
+    operation: Operation;
 
-    constructor(firstNumber: number, secondNumber: number, operation: string) {
+    constructor(firstNumber: number, secondNumber: number, operation: Operation) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operation = operation;

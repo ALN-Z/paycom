@@ -1,3 +1,4 @@
+import { Operation } from './enums/Operation';
 import { JSONprinter } from './models/JSONPrinter';
 import { Textprinter } from './models/TextPrinter';
 import { HTMLprinter } from './models/HTMLPrinter';
@@ -29,8 +30,8 @@ export function initPrinter(printerName: string): IPrinter {
     return posiblePrinters[printerName];
 }
 
-export function validateOperation(operationName: string): void {
-    if (!['add', 'subtract', 'multiply', 'divide'].includes(operationName)) {
+export function validateOperation(operationName: Operation): void {
+    if (![Operation.add, Operation.subtract, Operation.multiply, Operation.divide].includes(operationName)) {
         throw `Operation "${operationName}" is unknown! Posible operations are: add | subtract | multiply | divide.`;
     }
 }

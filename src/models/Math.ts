@@ -1,6 +1,7 @@
 import { Operation } from './../enums/Operation';
 import { IPrinter } from '../interfaces/IPrinter';
 
+
 export class MyMath {
     firstNumber: number;
     secondNumber: number;

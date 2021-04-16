@@ -1,6 +1,6 @@
-import { IPrinter } from '../interfaces/IPrinter';
+import { PrinterInterface } from '../interfaces/Printer.interface';
 
-export class JSONprinter implements IPrinter {
+export class JSONprinter implements PrinterInterface {
     print(a: number, b: number, operation: string, result: number): string {
 
         const obj = {

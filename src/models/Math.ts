@@ -1,5 +1,5 @@
 import { Operation } from './../enums/Operation';
-import { IPrinter } from '../interfaces/IPrinter';
+import { PrinterInterface } from '../interfaces/Printer.interface';
 
 
 export class MyMath {
@@ -15,7 +15,7 @@ export class MyMath {
     }
 
     result: number;
-    printer: IPrinter;
+    printer: PrinterInterface;
 
     add(): number {
         this.result = this.firstNumber + this.secondNumber;
@@ -44,7 +44,7 @@ export class MyMath {
 
     }
 
-    setPrinter(p: IPrinter): void {
+    setPrinter(p: PrinterInterface): void {
         this.printer = p;
     }
 

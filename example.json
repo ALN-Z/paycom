@@ -1,0 +1,5 @@
+{
+  "receivers": {
+    "$not": { "$elemMatch": { "diagnostic.status": { "$ne": null } } }
+  }
+}

@@ -35,11 +35,18 @@ describe('The divide function',()=> {
 describe('The divide function with 0', () => {
 it('Divide operation if last number is zero', ()=> {
     const math = new MyMath(8,0, Operation.add);
-    const result = math.divide();
-
-    expect(result).to.throw('Division operation cannot be performed');
+    
+    expect(() => math.divide()).to.throw('Division operation cannot be performed');
 });
 });
 
+describe('The multiply function', () => {
+    it('Should multiply 2 numbers', ()=> {
+        const math = new MyMath(8,1, Operation.add);
+        const result = math.multiply();
+
+        expect(result).to.be.equal(8);
+    });
+    });
 
 });

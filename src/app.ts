@@ -9,16 +9,17 @@ let firstNumber: number = parseAsInt(argv.a || argv.number1);
 let secondNumber: number = parseAsInt(argv.b || argv.number2);
 
 const operation = (argv.o || argv.operation).toLowerCase();
-const printervalue = (argv.p || argv.printer).toLowerCase();
-
-const math = new MyMath(firstNumber, secondNumber, operation);
-
 validateOperation(operation);
-executeOperation(math, operation);
+
+const printervalue = (argv.p || argv.printer).toLowerCase();
 validatePrinter(printervalue);
 
 const printer = initPrinter(printervalue);
+
+const math = new MyMath(firstNumber, secondNumber, operation);
 math.setPrinter(printer);
+
+executeOperation(math, operation);
 
 const resultOperation = math.getResult();
 console.log(resultOperation);

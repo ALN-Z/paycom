@@ -43,7 +43,4 @@ describe("Check class MATH", ()=> {
         expect(()=> validatePrinter(printerName)).to.throw(`Printer "${printerName}" is unknown! Posible printers are: json | text | html.`);
 
     })
-
-    
-
 })

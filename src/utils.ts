@@ -2,7 +2,7 @@ import { Operation } from './enums/Operation';
 import { JSONprinter } from './models/JSONPrinter';
 import { Textprinter } from './models/TextPrinter';
 import { HTMLprinter } from './models/HTMLPrinter';
-import { PrinterInterface } from './PrinterInterface/Printer.interface';
+import { IPrinter } from './PrinterInterface/IPrinter';
 import { MyMath } from './models/Math';
 
 export function parseAsInt(value: string): number {
@@ -26,7 +26,7 @@ export function validatePrinter(printerName: string): void {
     }
 }
 
-export function initPrinter(printerName: string): PrinterInterface {
+export function initPrinter(printerName: string): IPrinter {
     return posiblePrinters[printerName];
 }
 

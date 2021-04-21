@@ -1,13 +1,10 @@
 import { Operation } from './../enums/Operation';
-import { PrinterInterface } from '../PrinterInterface/Printer.interface';
+import { IPrinter } from '../PrinterInterface/IPrinter';
 
 export class MyMath {
     result: number;
-    printer: PrinterInterface;
+    printer: IPrinter;
     constructor(private firstNumber: number,private secondNumber: number,private operation: Operation) {
-        this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
-        this.operation = operation;
     }
     add(): number {
         return this.result = this.firstNumber + this.secondNumber;
@@ -24,7 +21,7 @@ export class MyMath {
         }
         throw 'Division operation cannot be performed';
     }
-    setPrinter(p: PrinterInterface): void {
+    setPrinter(p: IPrinter): void {
         this.printer = p;
     }
     getResult(): string {

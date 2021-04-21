@@ -5,8 +5,8 @@ import { MyMath } from './models/Math';
 
 const argv: any = yargs(hideBin(process.argv)).argv;
 
-let firstNumber: number = parseAsInt(argv.a || argv.number1);
-let secondNumber: number = parseAsInt(argv.b || argv.number2);
+const firstNumber: number = parseAsInt(argv.a || argv.number1);
+const secondNumber: number = parseAsInt(argv.b || argv.number2);
 
 const operation = (argv.o || argv.operation).toLowerCase();
 validateOperation(operation);

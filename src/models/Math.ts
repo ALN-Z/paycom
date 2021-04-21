@@ -1,57 +1,36 @@
 import { Operation } from './../enums/Operation';
-import { PrinterInterface } from '../interfaces/Printer.interface';
-
+import { PrinterInterface } from '../PrinterInterface/Printer.interface';
 
 export class MyMath {
-    firstNumber: number;
-    secondNumber: number;
-    operation: Operation;
-
-    constructor(firstNumber: number, secondNumber: number, operation: Operation) {
+    result: number;
+    printer: PrinterInterface;
+    constructor(private firstNumber: number,private secondNumber: number,private operation: Operation) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operation = operation;
-
     }
-
-    result: number;
-    printer: PrinterInterface;
-
     add(): number {
-        this.result = this.firstNumber + this.secondNumber;
-        return this.result;
-
+        return this.result = this.firstNumber + this.secondNumber;
     }
-
     subtract(): number {
-
-        this.result = this.firstNumber - this.secondNumber;
-        return this.result;
+        return this.result = this.firstNumber - this.secondNumber;
     }
-
     multiply(): number {
-
-        this.result = this.firstNumber * this.secondNumber;
-        return this.result;
+        return this.result = this.firstNumber * this.secondNumber;
     }
-
     divide(): number {
-
         if (this.secondNumber != 0) {
             return this.result = this.firstNumber / this.secondNumber;
         }
         throw 'Division operation cannot be performed';
-
     }
-
     setPrinter(p: PrinterInterface): void {
         this.printer = p;
     }
-
     getResult(): string {
-        if (this.printer) {
-            return this.printer.print(this.firstNumber, this.secondNumber, this.operation, this.result);
+        if (!this.printer) {
+            throw 'Printer not set';
         }
-        throw 'Printer not set';
+        return this.printer.print(this.firstNumber, this.secondNumber, this.operation, this.result);
     }
 }

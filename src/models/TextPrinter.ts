@@ -1,4 +1,4 @@
-import { PrinterInterface } from '../interfaces/Printer.interface';
+import { PrinterInterface } from '../PrinterInterface/Printer.interface';
 
 export class Textprinter implements PrinterInterface {
     print(a: number, b: number, operation: string, result: number): string {

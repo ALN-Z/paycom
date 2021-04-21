@@ -2,7 +2,7 @@ import { Operation } from './enums/Operation';
 import { JSONprinter } from './models/JSONPrinter';
 import { Textprinter } from './models/TextPrinter';
 import { HTMLprinter } from './models/HTMLPrinter';
-import { PrinterInterface } from './interfaces/Printer.interface';
+import { PrinterInterface } from './PrinterInterface/Printer.interface';
 import { MyMath } from './models/Math';
 
 export function parseAsInt(value: string): number {
